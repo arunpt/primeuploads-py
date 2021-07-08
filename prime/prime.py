@@ -13,6 +13,9 @@ class PrimeException(Exception):
 
 
 class PrimeUploads:
+    """
+    Base class which includes all the API methods
+    """
     def __init__(self) -> None:
         self.api_path = "https://primeuploads.com/api/v2/"
         self.access_token = None
