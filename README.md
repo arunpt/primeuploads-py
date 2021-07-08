@@ -12,11 +12,11 @@ pip3 install primeuploads-py
 from prime import PrimeUploads
 
 pu = PrimeUploads()
-pu.login(
+await pu.login(
     key1="AbCDefghiJkLMnoPQrstUVwxYz",  # API keys 
     key2="AbCDefghiJkLMnoPQrstUVwxYz"
 )
-pu.account_info()
+await pu.account_info()
 ```
 
 ### Links:
