@@ -69,7 +69,11 @@ class PrimeUploads:
             *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        return json.loads(stdout)
+
+        if stdout:
+            return json.loads(stdout)
+        else:
+            raise PrimeException(stderr.decode())
 
     async def download(self, file_id):
         """
